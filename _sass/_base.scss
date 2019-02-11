@@ -171,14 +171,14 @@ header {
     @include background-cover;
     background-position: center;
     background-image: url('../img/IMG_2107.jpg');
-    background-width: 100%;
+    background-image-width: 100%;
     text-align: center;
     color: white;
     .header-content {
         position: relative;
         text-align: center;
         padding: 100px 15px 100px;
-        width: 100%;s
+        width: 100%;
         .header-content-inner {
             h1 {
                 font-weight: 700;
