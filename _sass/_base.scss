@@ -198,7 +198,7 @@ header {
         }
     }
     @media (max-width: 769px){
-        min-width: auto;
+        min-width: absolute;
     }
     @media (min-width: 768px) {
         min-height: 100%;
