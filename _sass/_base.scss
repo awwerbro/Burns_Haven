@@ -167,10 +167,11 @@ aside {
 header {
     position: relative;
     width: 100%;
-//    min-height: auto;
+    min-height: auto;
     @include background-cover;
     background-position: center;
     background-image: url('../img/IMG_2107.jpg');
+    background-width: 100%;
     text-align: center;
     color: white;
     .header-content {
