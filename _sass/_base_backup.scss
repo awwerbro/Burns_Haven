@@ -166,12 +166,32 @@ aside {
 
 header {
     position: relative;
-    min-width: 100%;
+    min-width: auto;
     height: auto;
+    
+    //padding-top:50px;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/Header_2.jpg');
-    background-image-min-width:100%;
+    background: url('../img/IMG_2107.jpg');
+          /* Set a specified height, or the minimum height for the background image */
+      background-min-width: 100%;
+      background-min-height: 100%;
+
+      /* Set background image to fixed (don't scroll along with the page) */
+      background-attachment: fixed;
+
+      /* Center the background image */
+      background-position: 0px 50px;
+      
+
+      /* Set the background image to no repeat */
+      background-repeat: no-repeat;
+
+      /* Scale the background image to be as large as possible */
+      background-size: contain;
+        //background-fit : contain;
+        //overflow: hidden;
+    //background-image min-width:100%;
     text-align: center;
     color: white;
     .header-content {
@@ -180,12 +200,7 @@ header {
         padding: 100px 15px 100px;
         width: 100%;
         .header-content-inner {
-            h1 {
-                font-weight: 700;
-                text-transform: uppercase;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
+
             hr {
                 margin: 30px auto;
             }
@@ -193,15 +208,14 @@ header {
                 font-weight: 300;
                 color: rgba(white, .7);
                 font-size: 16px;
-                margin-bottom: 50px;
+                //margin-bottom: 50px;
             }
         }
     }
     @media (max-width: 769px){
         min-width: absolute;
-    }
-    @media (min-width: 768px) {
-        min-height: 100%;
+        min-height: 40%;
+        height: auto;
         .header-content {
             position: absolute;
             top: 50%;
@@ -209,6 +223,39 @@ header {
             -ms-transform: translateY(-50%);
             transform: translateY(-50%);
             padding: 0 50px;
+            .header-content-inner {
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                p {
+                    font-size: 14px;
+                    max-width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                h1 {
+                font-size: 16px;
+                    font-weight: 700;
+                text-transform: uppercase;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            }
+        }
+
+        
+    }
+    @media (min-width: 769px) {
+        min-width: absolute;
+        min-height: 100%;
+        height: auto;
+        .header-content {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            //padding: 0 50px;
             .header-content-inner {
                 max-width: 1000px;
                 margin-left: auto;
@@ -219,6 +266,12 @@ header {
                     margin-left: auto;
                     margin-right: auto;
                 }
+                            h1 {
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
             }
         }
     }
@@ -377,6 +430,8 @@ img::-moz-selection {
 
 body {
     -webkit-tap-highlight-color: $theme-dark;
+
+
 }
 
 /* --- Footer --- */
